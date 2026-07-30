@@ -1,0 +1,211 @@
+=========================================================
+     NLP LAB EXPERIMENTS 1 TO 6 RUNTIME OUTPUTS
+=========================================================
+
+#########################################################
+### EXP1.PY OUTPUT
+#########################################################
+INPUT PROVIDED:
+The striped bats were hanging upside down for eating small insects.
+----------------------------------------
+STDOUT:
+Enter a sentence: 
+Original Text:
+The striped bats were hanging upside down for eating small insects.
+
+Tokens:
+['The', 'striped', 'bats', 'were', 'hanging', 'upside', 'down', 'for', 'eating', 'small', 'insects', '.']
+
+Stemmed Words:
+['the', 'stripe', 'bat', 'were', 'hang', 'upsid', 'down', 'for', 'eat', 'small', 'insect', '.']
+
+Lemmatized Words:
+['The', 'striped', 'bat', 'were', 'hanging', 'upside', 'down', 'for', 'eating', 'small', 'insect', '.']
+
+Comparison:
+Stemming reduces words to root forms, which may not be meaningful.
+Lemmatization converts words to meaningful base forms.
+
+STDERR:
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+
+
+#########################################################
+### EXP2.PY OUTPUT
+#########################################################
+INPUT PROVIDED:
+The quick brown fox jumps over the lazy dog.
+----------------------------------------
+STDOUT:
+Enter a sentence: 
+Tokens:
+['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog', '.']
+
+POS Tags:
+The -> DT
+quick -> JJ
+brown -> NN
+fox -> NN
+jumps -> VBZ
+over -> IN
+the -> DT
+lazy -> JJ
+dog -> NN
+. -> .
+
+Tag Meanings:
+NN -> Noun
+VB -> Verb
+JJ -> Adjective
+RB -> Adverb
+PRP -> Pronoun
+DT -> Determiner
+
+Total Words: 10
+
+STDERR:
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger_eng to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger_eng is already up-to-
+[nltk_data]       date!
+
+
+#########################################################
+### EXP3.PY OUTPUT
+#########################################################
+INPUT PROVIDED:
+4
+Government announces new economic policy
+Economy grows as government releases new policy
+Local team wins championship match
+Sports team celebrates victory in final match
+dog
+cat
+----------------------------------------
+STDOUT:
+Enter number of headlines: Enter headline: Enter headline: Enter headline: Enter headline: 
+Cosine Similarity Matrix:
+[[1.         0.39168692 0.         0.        ]
+ [0.39168692 1.         0.         0.        ]
+ [0.         0.         1.         0.24153872]
+ [0.         0.         0.24153872 1.        ]]
+
+Headline Clusters:
+Government announces new economic policy -> Cluster 1
+Economy grows as government releases new policy -> Cluster 1
+Local team wins championship match -> Cluster 0
+Sports team celebrates victory in final match -> Cluster 0
+
+Enter first word: Enter second word: WordNet Similarity: 0.2
+
+STDERR:
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+
+
+#########################################################
+### EXP4.PY OUTPUT
+#########################################################
+INPUT PROVIDED:
+3
+Artificial intelligence and machine learning are revolutionizing technology.
+Deep learning models require extensive computational resources.
+Healthy diet and exercise improve overall well being.
+machine learning and artificial intelligence
+----------------------------------------
+STDOUT:
+Enter number of documents: Enter document: Enter document: Enter document: 
+Enter search query: 
+TF-IDF Similarity Scores:
+Document 1 : 0.762
+Document 2 : 0.111
+Document 3 : 0.103
+
+LSA Similarity Scores:
+Document 1 : 1.0
+Document 2 : 0.625
+Document 3 : 0.571
+
+Most Relevant Document:
+Artificial intelligence and machine learning are revolutionizing technology.
+
+
+#########################################################
+### EXP5.PY OUTPUT
+#########################################################
+INPUT PROVIDED:
+Supreme Court of India delivered judgment in New Delhi regarding Article 370 on Monday.
+4
+----------------------------------------
+STDOUT:
+Enter legal text: 
+Detected Named Entities:
+Supreme -> ENTITY
+Court -> ENTITY
+India -> ENTITY
+New -> ENTITY
+Delhi -> ENTITY
+Article -> ENTITY
+Monday -> ENTITY
+
+Enter actual number of entities: 
+Predicted Entities: 7
+NER Accuracy: 57.14 %
+
+STDERR:
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger_eng to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger_eng is already up-to-
+[nltk_data]       date!
+
+
+#########################################################
+### EXP6.PY OUTPUT
+#########################################################
+INPUT PROVIDED:
+Aspirin treats headache and reduces inflammation in patients.
+1
+----------------------------------------
+STDOUT:
+Enter biomedical sentence: Actual Relation (1/0): 
+Tokens:
+['aspirin', 'treats', 'headache', 'and', 'reduces', 'inflammation', 'in', 'patients', '.']
+
+Predicted Relation: 1
+Precision: 1.0
+Recall: 1.0
+F1-Score: 1.0
+
+STDERR:
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\fight\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+
+
