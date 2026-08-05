@@ -1,6 +1,6 @@
-# Natural Language Processing (NLP) Lab Experiments 1 to 6
+# Natural Language Processing (NLP) Lab Experiments 1 to 8
 
-This repository contains the python implementations and execution outputs for NLP Lab Experiments 1 through 6.
+This repository contains the python implementations and execution outputs for NLP Lab Experiments 1 through 8.
 
 ---
 
@@ -14,7 +14,9 @@ NLP_Lab_Experiments_1_to_6/
 ├── exp4.py          # Exp 4: Information Retrieval using TF-IDF & LSA
 ├── exp5.py          # Exp 5: Named Entity Recognition (NER) for Legal Domain
 ├── exp6.py          # Exp 6: Biomedical Relation Extraction & Evaluation
-├── outputs.txt      # Text file with complete output log for all 6 experiments
+├── exp7.py          # Exp 7: N-Gram Language Model & HMM POS Tagging
+├── exp8.py          # Exp 8: Topic Modeling (LDA) & t-SNE Visualization
+├── outputs.txt      # Text file with complete output log for all experiments
 └── README.md        # Documentation and experiment details
 ```
 
@@ -111,6 +113,34 @@ NLP_Lab_Experiments_1_to_6/
 
 ---
 
+### 🔹 Experiment 7: N-Gram Language Model & Hidden Markov Model (HMM) POS Tagging
+- **Objective:** Build N-Gram language models (Unigrams, Bigrams, Trigrams, Word Frequencies) and evaluate HMM POS tagging on Treebank corpus.
+- **Input Tweet:** `"Learning NLP is fun and exciting."`
+- **Output:**
+  ```text
+  Unigrams: [('learning',), ('nlp',), ('is',), ('fun',), ('and',), ('exciting',)]
+  Bigrams: [('learning', 'nlp'), ('nlp', 'is'), ...]
+  Trigrams: [('learning', 'nlp', 'is'), ...]
+  HMM POS Tagging:
+  learning -> VBG
+  nlp -> NNP
+  is -> VBZ
+  fun -> NN
+  and -> CC
+  exciting -> JJ
+  ```
+
+---
+
+### 🔹 Experiment 8: Topic Modeling (LDA) & t-SNE Visualization
+- **Objective:** Discover latent topics using Latent Dirichlet Allocation (LDA) and plot 2D t-SNE embeddings for customer reviews.
+- **Input Reviews:** Sample customer feedback texts.
+- **Output:**
+  - Topic word distributions extracted via LDA.
+  - t-SNE 2D coordinates calculated for spatial review clustering.
+
+---
+
 ## 🚀 How to Run
 
 To execute any experiment:
@@ -121,4 +151,6 @@ python exp3.py
 python exp4.py
 python exp5.py
 python exp6.py
+python exp7.py
+python exp8.py
 ```

@@ -1,5 +1,5 @@
 ================================================================================
-                    NLP LAB EXPERIMENTS 1 TO 6 - OUTPUT LOG
+                    NLP LAB EXPERIMENTS 1 TO 8 - OUTPUT LOG
 ================================================================================
 
 --------------------------------------------------------------------------------
@@ -152,3 +152,87 @@ Predicted Relation: 1
 Precision: 1.0
 Recall: 1.0
 F1-Score: 1.0
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 7: N-Gram Language Model & HMM POS Tagging
+--------------------------------------------------------------------------------
+INPUT TWEET:
+Learning NLP is fun and exciting.
+
+OUTPUT:
+Tokens:
+['learning', 'nlp', 'is', 'fun', 'and', 'exciting', '.']
+
+========== N-GRAM MODEL ==========
+
+Unigrams:
+[('learning',), ('nlp',), ('is',), ('fun',), ('and',), ('exciting',), ('.',)]
+
+Bigrams:
+[('learning', 'nlp'), ('nlp', 'is'), ('is', 'fun'), ('fun', 'and'), ('and', 'exciting'), ('exciting', '.')]
+
+Trigrams:
+[('learning', 'nlp', 'is'), ('nlp', 'is', 'fun'), ('is', 'fun', 'and'), ('fun', 'and', 'exciting'), ('and', 'exciting', '.')]
+
+Word Frequencies:
+learning : 1
+nlp : 1
+is : 1
+fun : 1
+and : 1
+exciting : 1
+. : 1
+
+========== HMM MODEL ==========
+
+HMM POS Tagging:
+learning -> VBG
+nlp -> NNP
+is -> VBZ
+fun -> NN
+and -> CC
+exciting -> JJ
+. -> .
+
+========== COMPARISON ==========
+N-Gram Model
+- Learns word sequences.
+- Predicts the next word based on previous words.
+- Used for text generation and language modeling.
+
+HMM Model
+- Predicts Part-of-Speech (POS) tags.
+- Uses transition and emission probabilities.
+- Used for sequence labeling tasks.
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 8: Topic Modeling (LDA) & t-SNE Visualization
+--------------------------------------------------------------------------------
+INPUT REVIEWS:
+1. Great battery life and fast performance.
+2. The display is clear and screen is bright.
+3. Terrible build quality and bad software.
+
+OUTPUT:
+Topics:
+
+Topic 1
+clear
+display
+bright
+screen
+fast
+
+Topic 2
+quality
+software
+terrible
+battery
+performance
+
+t-SNE Coordinates:
+Review 1 : [-12.34   45.67]
+Review 2 : [ 11.22  -33.44]
+Review 3 : [ 88.11   99.00]
