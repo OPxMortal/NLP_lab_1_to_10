@@ -1,13 +1,13 @@
 # Natural Language Processing (NLP) Lab Experiments 1 to 8
 
-This repository contains the python implementations and execution outputs for NLP Lab Experiments 1 through 8.
+This repository contains the python implementations and execution outputs (with 2 test cases per experiment) for NLP Lab Experiments 1 through 8.
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-NLP_Lab_Experiments_1_to_6/
+NLP_Lab_Experiments_1_to_8/
 ├── exp1.py          # Exp 1: Tokenization, Stemming & Lemmatization
 ├── exp2.py          # Exp 2: Part-of-Speech (POS) Tagging
 ├── exp3.py          # Exp 3: Cosine Similarity, Clustering & WordNet Similarity
@@ -16,7 +16,7 @@ NLP_Lab_Experiments_1_to_6/
 ├── exp6.py          # Exp 6: Biomedical Relation Extraction & Evaluation
 ├── exp7.py          # Exp 7: N-Gram Language Model & HMM POS Tagging
 ├── exp8.py          # Exp 8: Topic Modeling (LDA) & t-SNE Visualization
-├── outputs.txt      # Text file with complete output log for all experiments
+├── outputs.txt      # Text file with complete output log (2 test cases per experiment)
 └── README.md        # Documentation and experiment details
 ```
 

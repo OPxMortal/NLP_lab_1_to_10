@@ -5,6 +5,8 @@
 --------------------------------------------------------------------------------
 EXPERIMENT 1: Tokenization, Stemming & Lemmatization
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT SENTENCE:
 The striped bats were hanging upside down for eating small insects.
 
@@ -22,13 +24,36 @@ Lemmatized Words:
 ['The', 'striped', 'bat', 'were', 'hanging', 'upside', 'down', 'for', 'eating', 'small', 'insect', '.']
 
 Comparison:
-Stemming reduces words to root forms, which may not be meangful.
+Stemming reduces words to root forms, which may not be meaningful.
+Lemmatization converts words to meaningful base forms.
+
+[TEST CASE 2]
+INPUT SENTENCE:
+The leaves were falling gracefully from the tall branches of the trees.
+
+OUTPUT:
+Original Text:
+The leaves were falling gracefully from the tall branches of the trees.
+
+Tokens:
+['The', 'leaves', 'were', 'falling', 'gracefully', 'from', 'the', 'tall', 'branches', 'of', 'the', 'trees', '.']
+
+Stemmed Words:
+['the', 'leav', 'were', 'fall', 'graceful', 'from', 'the', 'tall', 'branch', 'of', 'the', 'tree', '.']
+
+Lemmatized Words:
+['The', 'leaf', 'were', 'falling', 'gracefully', 'from', 'the', 'tall', 'branch', 'of', 'the', 'tree', '.']
+
+Comparison:
+Stemming reduces words to root forms, which may not be meaningful.
 Lemmatization converts words to meaningful base forms.
 
 
 --------------------------------------------------------------------------------
 EXPERIMENT 2: Part-of-Speech (POS) Tagging
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT SENTENCE:
 The quick brown fox jumps over the lazy dog.
 
@@ -58,10 +83,40 @@ DT -> Determiner
 
 Total Words: 10
 
+[TEST CASE 2]
+INPUT SENTENCE:
+Artificial intelligence is transforming modern technology rapidly.
+
+OUTPUT:
+Tokens:
+['Artificial', 'intelligence', 'is', 'transforming', 'modern', 'technology', 'rapidly', '.']
+
+POS Tags:
+Artificial -> NNP
+intelligence -> NN
+is -> VBZ
+transforming -> VBG
+modern -> JJ
+technology -> NN
+rapidly -> RB
+. -> .
+
+Tag Meanings:
+NN -> Noun
+VB -> Verb
+JJ -> Adjective
+RB -> Adverb
+PRP -> Pronoun
+DT -> Determiner
+
+Total Words: 8
+
 
 --------------------------------------------------------------------------------
 EXPERIMENT 3: Cosine Similarity, K-Means Clustering & WordNet Similarity
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT HEADLINES:
 1. Government announces new economic policy
 2. Economy grows as government releases new policy
@@ -87,10 +142,38 @@ Sports team celebrates victory in final match -> Cluster 0
 
 WordNet Similarity: 0.2
 
+[TEST CASE 2]
+INPUT HEADLINES:
+1. Stock market reaches record high after economic boom
+2. Investors celebrate record highs in financial markets
+3. Scientists discover new species in deep ocean
+4. Marine biologists identify new ocean species in study
+
+INPUT WORDS FOR WORDNET SIMILARITY:
+Word 1: car
+Word 2: automobile
+
+OUTPUT:
+Cosine Similarity Matrix:
+[[1.         0.45281432 0.         0.        ]
+ [0.45281432 1.         0.         0.        ]
+ [0.         0.         1.         0.31849105]
+ [0.         0.         0.31849105 1.        ]]
+
+Headline Clusters:
+Stock market reaches record high after economic boom -> Cluster 0
+Investors celebrate record highs in financial markets -> Cluster 0
+Scientists discover new species in deep ocean -> Cluster 1
+Marine biologists identify new ocean species in study -> Cluster 1
+
+WordNet Similarity: 1.0
+
 
 --------------------------------------------------------------------------------
 EXPERIMENT 4: Information Retrieval using TF-IDF & LSA (Truncated SVD)
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT DOCUMENTS:
 1. Artificial intelligence and machine learning are revolutionizing technology.
 2. Deep learning models require extensive computational resources.
@@ -113,10 +196,35 @@ Document 3 : 0.571
 Most Relevant Document:
 Artificial intelligence and machine learning are revolutionizing technology.
 
+[TEST CASE 2]
+INPUT DOCUMENTS:
+1. Natural language processing enables computers to understand human language.
+2. Text classification and sentiment analysis are popular NLP tasks.
+3. Solar panels generate clean renewable energy from sunlight.
+
+INPUT SEARCH QUERY:
+NLP and natural language understanding
+
+OUTPUT:
+TF-IDF Similarity Scores:
+Document 1 : 0.642
+Document 2 : 0.284
+Document 3 : 0.000
+
+LSA Similarity Scores:
+Document 1 : 0.985
+Document 2 : 0.741
+Document 3 : 0.000
+
+Most Relevant Document:
+Natural language processing enables computers to understand human language.
+
 
 --------------------------------------------------------------------------------
 EXPERIMENT 5: Named Entity Recognition (NER) for Legal Domain
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT LEGAL TEXT:
 Supreme Court of India delivered judgment in New Delhi regarding Article 370 on Monday.
 
@@ -135,10 +243,31 @@ Monday -> ENTITY
 Predicted Entities: 7
 NER Accuracy: 57.14 %
 
+[TEST CASE 2]
+INPUT LEGAL TEXT:
+High Court of Bombay granted bail to John Doe in Mumbai on Friday.
+
+ACTUAL ENTITIES COUNT: 5
+
+OUTPUT:
+Detected Named Entities:
+High -> ENTITY
+Court -> ENTITY
+Bombay -> ENTITY
+John -> ENTITY
+Doe -> ENTITY
+Mumbai -> ENTITY
+Friday -> ENTITY
+
+Predicted Entities: 7
+NER Accuracy: 71.43 %
+
 
 --------------------------------------------------------------------------------
 EXPERIMENT 6: Biomedical Relation Extraction & Evaluation (Precision, Recall, F1)
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT BIOMEDICAL SENTENCE:
 Aspirin treats headache and reduces inflammation in patients.
 
@@ -153,10 +282,27 @@ Precision: 1.0
 Recall: 1.0
 F1-Score: 1.0
 
+[TEST CASE 2]
+INPUT BIOMEDICAL SENTENCE:
+Penicillin controls bacterial infections effectively in children.
+
+ACTUAL RELATION: 1
+
+OUTPUT:
+Tokens:
+['penicillin', 'controls', 'bacterial', 'infections', 'effectively', 'in', 'children', '.']
+
+Predicted Relation: 1
+Precision: 1.0
+Recall: 1.0
+F1-Score: 1.0
+
 
 --------------------------------------------------------------------------------
 EXPERIMENT 7: N-Gram Language Model & HMM POS Tagging
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT TWEET:
 Learning NLP is fun and exciting.
 
@@ -206,10 +352,60 @@ HMM Model
 - Uses transition and emission probabilities.
 - Used for sequence labeling tasks.
 
+[TEST CASE 2]
+INPUT TWEET:
+Python makes data science easy.
+
+OUTPUT:
+Tokens:
+['python', 'makes', 'data', 'science', 'easy', '.']
+
+========== N-GRAM MODEL ==========
+
+Unigrams:
+[('python',), ('makes',), ('data',), ('science',), ('easy',), ('.',)]
+
+Bigrams:
+[('python', 'makes'), ('makes', 'data'), ('data', 'science'), ('science', 'easy'), ('easy', '.')]
+
+Trigrams:
+[('python', 'makes', 'data'), ('makes', 'data', 'science'), ('data', 'science', 'easy'), ('science', 'easy', '.')]
+
+Word Frequencies:
+python : 1
+makes : 1
+data : 1
+science : 1
+easy : 1
+. : 1
+
+========== HMM MODEL ==========
+
+HMM POS Tagging:
+python -> NNP
+makes -> VBZ
+data -> NNS
+science -> NN
+easy -> JJ
+. -> .
+
+========== COMPARISON ==========
+N-Gram Model
+- Learns word sequences.
+- Predicts the next word based on previous words.
+- Used for text generation and language modeling.
+
+HMM Model
+- Predicts Part-of-Speech (POS) tags.
+- Uses transition and emission probabilities.
+- Used for sequence labeling tasks.
+
 
 --------------------------------------------------------------------------------
 EXPERIMENT 8: Topic Modeling (LDA) & t-SNE Visualization
 --------------------------------------------------------------------------------
+
+[TEST CASE 1]
 INPUT REVIEWS:
 1. Great battery life and fast performance.
 2. The display is clear and screen is bright.
@@ -236,3 +432,33 @@ t-SNE Coordinates:
 Review 1 : [-12.34   45.67]
 Review 2 : [ 11.22  -33.44]
 Review 3 : [ 88.11   99.00]
+
+[TEST CASE 2]
+INPUT REVIEWS:
+1. Excellent camera quality and crisp photos.
+2. Lens resolution is sharp and zoom is great.
+3. Slow charging speed and poor battery backup.
+4. Charging cable breaks easily and battery dies fast.
+
+OUTPUT:
+Topics:
+
+Topic 1
+camera
+quality
+crisp
+lens
+sharp
+
+Topic 2
+charging
+battery
+slow
+poor
+breaks
+
+t-SNE Coordinates:
+Review 1 : [-25.41   18.72]
+Review 2 : [-20.15   12.30]
+Review 3 : [ 34.88  -42.11]
+Review 4 : [ 41.05  -38.65]
