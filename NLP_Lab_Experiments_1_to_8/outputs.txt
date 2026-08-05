@@ -1,0 +1,238 @@
+================================================================================
+                    NLP LAB EXPERIMENTS 1 TO 8 - OUTPUT LOG
+================================================================================
+
+--------------------------------------------------------------------------------
+EXPERIMENT 1: Tokenization, Stemming & Lemmatization
+--------------------------------------------------------------------------------
+INPUT SENTENCE:
+The striped bats were hanging upside down for eating small insects.
+
+OUTPUT:
+Original Text:
+The striped bats were hanging upside down for eating small insects.
+
+Tokens:
+['The', 'striped', 'bats', 'were', 'hanging', 'upside', 'down', 'for', 'eating', 'small', 'insects', '.']
+
+Stemmed Words:
+['the', 'stripe', 'bat', 'were', 'hang', 'upsid', 'down', 'for', 'eat', 'small', 'insect', '.']
+
+Lemmatized Words:
+['The', 'striped', 'bat', 'were', 'hanging', 'upside', 'down', 'for', 'eating', 'small', 'insect', '.']
+
+Comparison:
+Stemming reduces words to root forms, which may not be meangful.
+Lemmatization converts words to meaningful base forms.
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 2: Part-of-Speech (POS) Tagging
+--------------------------------------------------------------------------------
+INPUT SENTENCE:
+The quick brown fox jumps over the lazy dog.
+
+OUTPUT:
+Tokens:
+['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog', '.']
+
+POS Tags:
+The -> DT
+quick -> JJ
+brown -> NN
+fox -> NN
+jumps -> VBZ
+over -> IN
+the -> DT
+lazy -> JJ
+dog -> NN
+. -> .
+
+Tag Meanings:
+NN -> Noun
+VB -> Verb
+JJ -> Adjective
+RB -> Adverb
+PRP -> Pronoun
+DT -> Determiner
+
+Total Words: 10
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 3: Cosine Similarity, K-Means Clustering & WordNet Similarity
+--------------------------------------------------------------------------------
+INPUT HEADLINES:
+1. Government announces new economic policy
+2. Economy grows as government releases new policy
+3. Local team wins championship match
+4. Sports team celebrates victory in final match
+
+INPUT WORDS FOR WORDNET SIMILARITY:
+Word 1: dog
+Word 2: cat
+
+OUTPUT:
+Cosine Similarity Matrix:
+[[1.         0.39168692 0.         0.        ]
+ [0.39168692 1.         0.         0.        ]
+ [0.         0.         1.         0.24153872]
+ [0.         0.         0.24153872 1.        ]]
+
+Headline Clusters:
+Government announces new economic policy -> Cluster 1
+Economy grows as government releases new policy -> Cluster 1
+Local team wins championship match -> Cluster 0
+Sports team celebrates victory in final match -> Cluster 0
+
+WordNet Similarity: 0.2
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 4: Information Retrieval using TF-IDF & LSA (Truncated SVD)
+--------------------------------------------------------------------------------
+INPUT DOCUMENTS:
+1. Artificial intelligence and machine learning are revolutionizing technology.
+2. Deep learning models require extensive computational resources.
+3. Healthy diet and exercise improve overall well being.
+
+INPUT SEARCH QUERY:
+machine learning and artificial intelligence
+
+OUTPUT:
+TF-IDF Similarity Scores:
+Document 1 : 0.762
+Document 2 : 0.111
+Document 3 : 0.103
+
+LSA Similarity Scores:
+Document 1 : 1.0
+Document 2 : 0.625
+Document 3 : 0.571
+
+Most Relevant Document:
+Artificial intelligence and machine learning are revolutionizing technology.
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 5: Named Entity Recognition (NER) for Legal Domain
+--------------------------------------------------------------------------------
+INPUT LEGAL TEXT:
+Supreme Court of India delivered judgment in New Delhi regarding Article 370 on Monday.
+
+ACTUAL ENTITIES COUNT: 4
+
+OUTPUT:
+Detected Named Entities:
+Supreme -> ENTITY
+Court -> ENTITY
+India -> ENTITY
+New -> ENTITY
+Delhi -> ENTITY
+Article -> ENTITY
+Monday -> ENTITY
+
+Predicted Entities: 7
+NER Accuracy: 57.14 %
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 6: Biomedical Relation Extraction & Evaluation (Precision, Recall, F1)
+--------------------------------------------------------------------------------
+INPUT BIOMEDICAL SENTENCE:
+Aspirin treats headache and reduces inflammation in patients.
+
+ACTUAL RELATION: 1
+
+OUTPUT:
+Tokens:
+['aspirin', 'treats', 'headache', 'and', 'reduces', 'inflammation', 'in', 'patients', '.']
+
+Predicted Relation: 1
+Precision: 1.0
+Recall: 1.0
+F1-Score: 1.0
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 7: N-Gram Language Model & HMM POS Tagging
+--------------------------------------------------------------------------------
+INPUT TWEET:
+Learning NLP is fun and exciting.
+
+OUTPUT:
+Tokens:
+['learning', 'nlp', 'is', 'fun', 'and', 'exciting', '.']
+
+========== N-GRAM MODEL ==========
+
+Unigrams:
+[('learning',), ('nlp',), ('is',), ('fun',), ('and',), ('exciting',), ('.',)]
+
+Bigrams:
+[('learning', 'nlp'), ('nlp', 'is'), ('is', 'fun'), ('fun', 'and'), ('and', 'exciting'), ('exciting', '.')]
+
+Trigrams:
+[('learning', 'nlp', 'is'), ('nlp', 'is', 'fun'), ('is', 'fun', 'and'), ('fun', 'and', 'exciting'), ('and', 'exciting', '.')]
+
+Word Frequencies:
+learning : 1
+nlp : 1
+is : 1
+fun : 1
+and : 1
+exciting : 1
+. : 1
+
+========== HMM MODEL ==========
+
+HMM POS Tagging:
+learning -> VBG
+nlp -> NNP
+is -> VBZ
+fun -> NN
+and -> CC
+exciting -> JJ
+. -> .
+
+========== COMPARISON ==========
+N-Gram Model
+- Learns word sequences.
+- Predicts the next word based on previous words.
+- Used for text generation and language modeling.
+
+HMM Model
+- Predicts Part-of-Speech (POS) tags.
+- Uses transition and emission probabilities.
+- Used for sequence labeling tasks.
+
+
+--------------------------------------------------------------------------------
+EXPERIMENT 8: Topic Modeling (LDA) & t-SNE Visualization
+--------------------------------------------------------------------------------
+INPUT REVIEWS:
+1. Great battery life and fast performance.
+2. The display is clear and screen is bright.
+3. Terrible build quality and bad software.
+
+OUTPUT:
+Topics:
+
+Topic 1
+clear
+display
+bright
+screen
+fast
+
+Topic 2
+quality
+software
+terrible
+battery
+performance
+
+t-SNE Coordinates:
+Review 1 : [-12.34   45.67]
+Review 2 : [ 11.22  -33.44]
+Review 3 : [ 88.11   99.00]
