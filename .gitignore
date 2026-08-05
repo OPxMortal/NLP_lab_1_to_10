@@ -1,0 +1,7 @@
+# Ignore unneeded root files
+NLP LAB.docx
+NLP LAB.pdf
+NLP_Lab_Experiments_1_to_6.zip
+experiments/
+__pycache__/
+*.pyc
